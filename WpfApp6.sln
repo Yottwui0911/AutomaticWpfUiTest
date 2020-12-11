@@ -7,20 +7,40 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp6", "WpfApp6\WpfApp6.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinAppDriverTest", "WinAppDriverTest\WinAppDriverTest.csproj", "{5362330C-6D20-428A-AA63-34BF5D10EC65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendlyTest", "FriendlyTest\FriendlyTest.csproj", "{B80AFE0C-105C-4837-ADED-370B55A45D6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Debug|x64.ActiveCfg = Debug|x64
+		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Debug|x64.Build.0 = Debug|x64
 		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Release|x64.ActiveCfg = Release|Any CPU
+		{6EC2C9B8-44A2-43D2-9893-93D6ECCE3763}.Release|x64.Build.0 = Release|Any CPU
 		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Debug|x64.ActiveCfg = Debug|x64
+		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Debug|x64.Build.0 = Debug|x64
 		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Release|x64.ActiveCfg = Release|Any CPU
+		{5362330C-6D20-428A-AA63-34BF5D10EC65}.Release|x64.Build.0 = Release|Any CPU
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Debug|x64.ActiveCfg = Debug|x64
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Debug|x64.Build.0 = Debug|x64
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Release|x64.ActiveCfg = Release|x64
+		{B80AFE0C-105C-4837-ADED-370B55A45D6A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

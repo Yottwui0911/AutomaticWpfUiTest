@@ -1,0 +1,99 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:WpfApp6.Converters"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfApp6"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+  <Window.Resources>
+    <ResourceDictionary>
+      <converters:EnumToBooleanConverter x:Key="EnumToBoolean" />
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.DataContext>
+    <local:MainViewModel />
+  </Window.DataContext>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <TextBlock Margin="5,2.5"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Text="登録者名: " />
+    <TextBox x:Name="Name"
+             Grid.Column="1"
+             Height="25"
+             Margin="5,2.5"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Center"
+             Text="{Binding Path=Name, Mode=TwoWay}" />
+    <TextBlock Grid.Row="1"
+               Margin="5,2.5"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Text="性別: " />
+    <StackPanel x:Name="Sex"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="5,2.5"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+      <RadioButton x:Name="Male"
+                   Margin="5,2.5"
+                   Content="男性"
+                   IsChecked="{Binding Path=Sex, Mode=TwoWay, Converter={StaticResource EnumToBoolean}, ConverterParameter=0, UpdateSourceTrigger=PropertyChanged}" />
+      <RadioButton x:Name="Female"
+                   Margin="5,2.5"
+                   Content="女性"
+                   IsChecked="{Binding Path=Sex, Mode=TwoWay, Converter={StaticResource EnumToBoolean}, ConverterParameter=1, UpdateSourceTrigger=PropertyChanged}" />
+      <RadioButton x:Name="Neither"
+                   Margin="5,2.5"
+                   Content="どちらでもない"
+                   IsChecked="{Binding Path=Sex, Mode=TwoWay, Converter={StaticResource EnumToBoolean}, ConverterParameter=2, UpdateSourceTrigger=PropertyChanged}" />
+      <RadioButton x:Name="Other"
+                   Margin="5,2.5"
+                   Content="その他"
+                   IsChecked="{Binding Path=Sex, Mode=TwoWay, Converter={StaticResource EnumToBoolean}, ConverterParameter=3, UpdateSourceTrigger=PropertyChanged}" />
+    </StackPanel>
+    <TextBlock Grid.Row="2"
+               Margin="5,2.5"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Text="登録する経緯: " />
+    <ComboBox x:Name="Reason"
+              Grid.Row="2"
+              Grid.Column="1"
+              Margin="5,2.5"
+              VerticalAlignment="Center"
+              DisplayMemberPath="Value"
+              ItemsSource="{Binding Path=Reason, Mode=OneWay}"
+              SelectedValue="{Binding Path=SelectedReason}"
+              SelectedValuePath="Key" />
+    <Button x:Name="RegisterBtn"
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Height="30"
+            Margin="5,2.5"
+            VerticalAlignment="Center"
+            Command="{Binding Path=RegiseterCommand, Mode=OneTime}"
+            Content="登録" />
+    <TextBlock x:Name="Output"
+               Grid.Row="4"
+               Grid.ColumnSpan="2"
+               Margin="5"
+               Text="{Binding Path=Output, Mode=OneWay}" />
+  </Grid>
+</Window>
